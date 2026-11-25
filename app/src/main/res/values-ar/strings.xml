@@ -1,0 +1,75 @@
+<resources>
+    <!-- اسم التطبيق -->
+    <string name="app_name">ستريم فلو</string>
+
+    <!-- التنقل -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_trending">الرائج</string>
+    <string name="nav_subscriptions">الاشتراكات</string>
+    <string name="nav_library">المكتبة</string>
+
+    <!-- عام -->
+    <string name="back">رجوع</string>
+    <string name="search">بحث</string>
+    <string name="settings">الإعدادات</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="clear">مسح</string>
+    <string name="cancel">إلغاء</string>
+    <string name="save">حفظ</string>
+    <string name="ok">موافق</string>
+    <string name="close">إغلاق</string>
+    <string name="load_more">تحميل المزيد</string>
+    <string name="search_placeholder">ابحث عن مقاطع، قنوات…</string>
+
+    <!-- الفيديو -->
+    <string name="views">مشاهدة</string>
+    <string name="subscribe">اشتراك</string>
+    <string name="unsubscribe">إلغاء الاشتراك</string>
+    <string name="related">ذات صلة</string>
+    <string name="comments">التعليقات</string>
+    <string name="chapters">الفصول</string>
+
+    <!-- الفئات / التصفية -->
+    <string name="all">الكل</string>
+    <string name="music">موسيقى</string>
+    <string name="gaming">ألعاب</string>
+    <string name="news">أخبار</string>
+    <string name="sports">رياضة</string>
+    <string name="tech">تقنية</string>
+    <string name="filter_all">الكل</string>
+    <string name="filter_videos">مقاطع</string>
+    <string name="filter_channels">قنوات</string>
+    <string name="filter_playlists">قوائم تشغيل</string>
+    <string name="filter_music">موسيقى</string>
+
+    <!-- الإعدادات -->
+    <string name="settings_network">الشبكة</string>
+    <string name="settings_piped_instance">رابط خادم Piped</string>
+    <string name="settings_piped_hint">https://pipedapi.kavin.rocks/</string>
+    <string name="settings_disable_proxy">تعطيل وكيل Piped</string>
+    <string name="settings_disable_proxy_desc">بث الفيديو مباشرةً (خصوصية أقل، قد يحل مشاكل التشغيل)</string>
+    <string name="settings_playback">التشغيل</string>
+    <string name="settings_quality">الجودة الافتراضية</string>
+    <string name="settings_autoplay">التشغيل التلقائي</string>
+    <string name="settings_autoplay_desc">تشغيل الفيديو التالي تلقائياً</string>
+    <string name="settings_background">التشغيل في الخلفية</string>
+    <string name="settings_pip">صورة داخل صورة</string>
+    <string name="settings_enhancements">الإضافات</string>
+    <string name="settings_sponsorblock">SponsorBlock</string>
+    <string name="settings_sponsorblock_desc">تخطي المقاطع الإعلانية تلقائياً</string>
+    <string name="settings_ryd">Return YouTube Dislike</string>
+    <string name="settings_ryd_desc">إظهار عدد الإعجابات السلبية</string>
+    <string name="settings_dearrow">DeArrow</string>
+    <string name="settings_dearrow_desc">استبدال العناوين والصور المبالغ فيها</string>
+    <string name="settings_appearance">المظهر</string>
+    <string name="settings_theme">السمة</string>
+    <string name="settings_dynamic_color">الألوان الديناميكية (Material You)</string>
+    <string name="settings_language">اللغة</string>
+    <string name="settings_region">منطقة المحتوى الرائج</string>
+
+    <!-- الأخطاء -->
+    <string name="error_network">لا يوجد اتصال بالإنترنت</string>
+    <string name="error_piped">خادم Piped غير متاح. جرب تغيير الخادم من الإعدادات ← الشبكة</string>
+    <string name="error_rate_limit">يوتيوب يحد من الطلبات. انتظر قليلاً أو غير الخادم</string>
+    <string name="error_playback">فشل التشغيل. قد تكون رابط البث قد انتهت صلاحيته</string>
+</resources>

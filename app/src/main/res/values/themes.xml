@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.StreamFlow" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowSplashScreenBackground">@color/md_theme_background</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="windowSplashScreenAnimationDuration">600</item>
+    </style>
+</resources>
