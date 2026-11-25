@@ -2,6 +2,7 @@ package dev.streamflow.android.data.repository
 
 import dev.streamflow.android.data.api.PipedApiService
 import dev.streamflow.android.data.api.SponsorBlockService
+import dev.streamflow.android.data.api.SubscriptionItem
 import dev.streamflow.android.data.api.ReturnYouTubeDislikeService
 import dev.streamflow.android.data.api.DeArrowService
 import dev.streamflow.android.data.model.*

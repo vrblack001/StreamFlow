@@ -90,7 +90,7 @@ fun SearchScreen(
                 "all"      to stringResource(R.string.filter_all),
                 "videos"   to stringResource(R.string.filter_videos),
                 "channels" to stringResource(R.string.filter_channels),
-                "playlists"to stringResource(R.string.filter_playlists),
+                "playlists" to stringResource(R.string.filter_playlists),
                 "music_songs" to stringResource(R.string.filter_music)
             )
             LazyRow(
