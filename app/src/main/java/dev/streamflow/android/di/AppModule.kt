@@ -4,6 +4,9 @@ import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.media3.common.AudioAttributes
+import androidx.media3.common.C
+import androidx.media3.exoplayer.ExoPlayer
 import androidx.room.Room
 import dagger.Module
 import dagger.Provides
@@ -139,4 +142,18 @@ object AppModule {
     @Singleton
     fun providePreferencesManager(@ApplicationContext ctx: Context): PreferencesManager =
         PreferencesManager(ctx.dataStore)
+
+    // ── ExoPlayer (non-singleton; released when PlayerViewModel clears) ──
+    @Provides
+    fun provideExoPlayer(@ApplicationContext ctx: Context): ExoPlayer =
+        ExoPlayer.Builder(ctx)
+            .setAudioAttributes(
+                AudioAttributes.Builder()
+                    .setUsage(C.USAGE_MEDIA)
+                    .setContentType(C.AUDIO_CONTENT_TYPE_MOVIE)
+                    .build(),
+                true
+            )
+            .setHandleAudioBecomingNoisy(true)
+            .build()
 }

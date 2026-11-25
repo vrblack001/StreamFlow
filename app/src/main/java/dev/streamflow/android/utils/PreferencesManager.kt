@@ -128,6 +128,9 @@ class PreferencesManager @Inject constructor(
     suspend fun setBackgroundPlay(value: Boolean) = dataStore.edit {
         it[BACKGROUND_PLAY] = value
     }
+    suspend fun setPipEnabled(value: Boolean) = dataStore.edit {
+        it[PIP_ENABLED] = value
+    }
     suspend fun setSponsorBlockEnabled(value: Boolean) = dataStore.edit {
         it[SPONSOR_BLOCK_ENABLED] = value
     }

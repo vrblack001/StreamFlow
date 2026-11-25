@@ -21,6 +21,7 @@ workmanager         = "2.9.1"
 # Third-party enhancements (SponsorBlock / RYD / DeArrow)
 jsoup               = "1.18.3"
 newpipe             = "v0.24.5"
+material            = "1.12.0"
 
 [libraries]
 # AndroidX core
@@ -29,6 +30,7 @@ androidx-lifecycle-runtime     = { group = "androidx.lifecycle", name = "lifecyc
 androidx-lifecycle-viewmodel   = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 androidx-activity-compose      = { group = "androidx.activity",  name = "activity-compose",   version.ref = "activityCompose" }
 androidx-splashscreen          = { group = "androidx.core",      name = "core-splashscreen",  version.ref = "splashscreen" }
+material                       = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 # Compose BOM
 androidx-compose-bom           = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }

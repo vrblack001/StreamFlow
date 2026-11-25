@@ -1,16 +1,19 @@
 package dev.streamflow.android.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import androidx.navigation.compose.currentBackStackEntryAsState
+import coil.compose.AsyncImage
 import dev.streamflow.android.R
 import dev.streamflow.android.ui.navigation.Screen
 
@@ -97,12 +100,12 @@ fun CommentItem(comment: dev.streamflow.android.data.model.Comment) {
             .padding(horizontal = 16.dp, vertical = 8.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        coil.compose.AsyncImage(
+        AsyncImage(
             model = comment.thumbnail,
             contentDescription = null,
             modifier = Modifier
                 .size(36.dp)
-                .androidx.compose.ui.draw.clip(androidx.compose.foundation.shape.CircleShape)
+                .clip(CircleShape)
         )
         Column {
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -142,14 +145,15 @@ fun ChapterItem(
             })
         },
         leadingContent = {
-            coil.compose.AsyncImage(
+            AsyncImage(
                 model = chapter.image,
                 contentDescription = null,
                 modifier = Modifier.size(80.dp, 45.dp)
             )
         },
-        modifier = Modifier.fillMaxWidth()
-            .androidx.compose.foundation.clickable(onClick = onClick)
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
     )
 }
 
@@ -178,8 +182,9 @@ fun SearchHistorySection(
                 leadingContent = {
                     Icon(Icons.Default.History, contentDescription = null)
                 },
-                modifier = Modifier.fillMaxWidth()
-                    .androidx.compose.foundation.clickable { onItemClick(query) }
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { onItemClick(query) }
             )
         }
     }

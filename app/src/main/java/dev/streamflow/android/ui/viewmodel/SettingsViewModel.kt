@@ -64,6 +64,6 @@ class SettingsViewModel @Inject constructor(
     fun setDeArrow(v: Boolean) = viewModelScope.launch { prefsManager.setDeArrowEnabled(v) }
     fun setAutoPlay(v: Boolean) = viewModelScope.launch { prefsManager.setAutoPlay(v) }
     fun setBackgroundPlay(v: Boolean) = viewModelScope.launch { prefsManager.setBackgroundPlay(v) }
-    fun setPip(v: Boolean) = viewModelScope.launch { prefsManager.setPipedInstanceUrl(v.toString()) }
+    fun setPip(v: Boolean) = viewModelScope.launch { prefsManager.setPipEnabled(v) }
     fun setDynamicColor(v: Boolean) = viewModelScope.launch { prefsManager.setDynamicColor(v) }
 }

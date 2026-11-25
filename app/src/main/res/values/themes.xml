@@ -1,7 +1,10 @@
 <resources>
-    <style name="Theme.StreamFlow" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:windowSplashScreenBackground">@color/md_theme_background</item>
-        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+    <style name="Theme.StreamFlow" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/md_theme_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
         <item name="windowSplashScreenAnimationDuration">600</item>
+        <item name="postSplashScreenTheme">@style/Theme.StreamFlow.Main</item>
     </style>
+
+    <style name="Theme.StreamFlow.Main" parent="Theme.Material3.DayNight.NoActionBar" />
 </resources>
