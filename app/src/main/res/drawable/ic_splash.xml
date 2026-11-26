@@ -3,10 +3,20 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- Emerald Circle Background -->
     <path
-        android:fillColor="#FF0000"
-        android:pathData="M54,54m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0" />
+        android:fillColor="#FF0D5C3A"
+        android:pathData="M54,54m-48,0a48,48 0,1 1,96 0a48,48 0,1 1,-96 0" />
+    <!-- Golden Crescent Moon -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M45,38 L72,54 L45,70 Z" />
+        android:fillColor="#FFD4AF37"
+        android:pathData="M52,24 C36,24 24,37 24,54 C24,71 36,84 52,84 C43,76 38,65 38,54 C38,43 43,32 52,24 Z" />
+    <!-- Modern Play Triangle inside Crescent -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M50,42 L72,54 L50,66 Z" />
+    <!-- Islamic Star Accent -->
+    <path
+        android:fillColor="#FFD4AF37"
+        android:pathData="M66,32 L68,37 L73,37 L69,40 L71,45 L66,42 L62,45 L64,40 L60,37 L65,37 Z" />
 </vector>

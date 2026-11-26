@@ -6,7 +6,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -30,11 +29,25 @@ fun HomeScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(
-                        text = stringResource(R.string.app_name),
-                        style = MaterialTheme.typography.titleLarge,
-                        color = MaterialTheme.colorScheme.primary
-                    )
+                    Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                        Text(
+                            text = stringResource(R.string.app_name),
+                            style = MaterialTheme.typography.titleLarge,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(Modifier.width(8.dp))
+                        Surface(
+                            shape = androidx.compose.foundation.shape.RoundedCornerShape(4.dp),
+                            color = MaterialTheme.colorScheme.secondaryContainer
+                        ) {
+                            Text(
+                                text = "v1.1",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSecondaryContainer,
+                                modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
+                            )
+                        }
+                    }
                 },
                 actions = {
                     IconButton(onClick = { navController.navigate(Screen.Search.createRoute()) }) {
@@ -55,20 +68,25 @@ fun HomeScreen(
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-            // Category chips
+            // شريط الفئات الإسلامية والعامة
             ScrollableTabRow(selectedTabIndex = selectedTab, edgePadding = 8.dp) {
                 val categories = listOf(
                     stringResource(R.string.all),
-                    stringResource(R.string.music),
-                    stringResource(R.string.gaming),
-                    stringResource(R.string.news),
-                    stringResource(R.string.sports),
-                    stringResource(R.string.tech)
+                    stringResource(R.string.quran),
+                    stringResource(R.string.lectures),
+                    stringResource(R.string.nasheed),
+                    stringResource(R.string.education),
+                    stringResource(R.string.news)
                 )
                 categories.forEachIndexed { index, label ->
                     Tab(
                         selected = selectedTab == index,
-                        onClick = { selectedTab = index },
+                        onClick = {
+                            selectedTab = index
+                            if (index > 0) {
+                                navController.navigate(Screen.Search.createRoute(label))
+                            }
+                        },
                         text = { Text(label) }
                     )
                 }

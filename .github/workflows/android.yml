@@ -1,8 +1,10 @@
-name: Build & Release StreamFlow APK
+name: Build & Release MuslimTube APK
 
 on:
   push:
     branches: [ main, master ]
+    tags:
+      - 'v*'
   workflow_dispatch:
 
 permissions:
@@ -40,27 +42,43 @@ jobs:
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: StreamFlow-v1.0-Debug-APK
+          name: MuslimTube-v1.1-APK
           path: app/build/outputs/apk/debug/*.apk
           retention-days: 30
 
       - name: Create Release and Upload APK
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.0
-          name: "StreamFlow v1.0.0 (Initial Release)"
+          tag_name: v1.1.0
+          name: "MuslimTube v1.1.0 - مسلم توب"
           body: |
-            ## StreamFlow v1.0.0 🚀
-            تطبيق يوتيوب متكامل ومبني على أفضل مزايا LibreTube و Flow مع دعم العربية وحل كافة المشاكل.
+            ## تحديث تطبيق مسلم توب (MuslimTube v1.1.0) 🌙✨
 
-            ### المميزات:
-            - دعم أندرويد 10 فما فوق ولجميع المعماريات (arm64, armeabi-v7a, x86, x86_64).
-            - بدون خدمات جوجل أو تتبع (عبر Piped API).
-            - SponsorBlock + Return YouTube Dislike + DeArrow مدمجة.
-            - تشغيل في الخلفية وصورة داخل صورة (PiP).
-            - واجهة عربية كاملة RTL وتصميم Material You.
+            تحديث شامل لتطبيق يوتيوب الإسلامي البديل، يدمج أفضل مزايا LibreTube و Flow مع إصلاحات جذرية ودعم مباشر لليوتيوب.
 
-            **حمل ملف الـ APK المرفق بالأسفل وثبته على هاتفك مباشرة.**
+            ### 🚀 أبرز الجديد في هذا التحديث:
+            1. **هوية إسلامية مميزة (مسلم توب):**
+               - ثيم إسلامي أنيق بألوان الأخضر الزمردي والذهبي الأندلسي الهادئ.
+               - أقسام وفئات سريعة (قرآن كريم، محاضرات ودروس، أناشيد هادفة، تعليم، أخبار).
+               - أيقونة هلال إسلامية عصرية وشاشة بدء أنيقة.
+
+            2. **جلب الفيديوهات مباشرة من يوتيوب (Direct YouTube):**
+               - خيار جديد مفعّل في الإعدادات لسحب روابط الفيديو مباشرة عبر محرك NewPipe بدون الاعتماد على سيرفرات Piped الخارجية التي قد تتعطل.
+
+            3. **إيماءات التحكم الكاملة أثناء تشغيل الفيديو (Gestures):**
+               - السحب عمودياً على يمين الشاشة للتحكم بالصوت (Volume).
+               - السحب عمودياً على يسار الشاشة للتحكم بالسطوع (Brightness).
+               - النقر المزدوج على اليمين للتقديم 10 ثوانٍ، وعلى اليسار للإرجاع 10 ثوانٍ.
+               - إظهار مؤشر بياني أنيق عند تعديل الصوت والسطوع والتقديم.
+
+            4. **تحسين التنقل وحفظ الإعدادات:**
+               - زر حفظ صريح وزر رجوع للتنقل والخروج من شاشة الإعدادات بسلاسة مع حفظ دائم في DataStore.
+
+            5. **دعم شامل للأجهزة والمعماريات:**
+               - يدعم أندرويد 10 فما فوق ولجميع المعماريات (arm64, armeabi-v7a, x86, x86_64).
+               - ميزات SponsorBlock و Return YouTube Dislike و PiP والتشغيل في الخلفية.
+
+            **قم بتحميل ملف `app-universal-debug.apk` أو الحزمة المتوافقة مع معمارية جهازك من الأسفل.**
           files: app/build/outputs/apk/debug/*.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

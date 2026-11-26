@@ -1,4 +1,6 @@
 <resources>
-    <color name="md_theme_background">#FF0F0F0F</color>
-    <color name="ic_launcher_background">#FFFF0000</color>
+    <color name="md_theme_background">#FF0B1510</color>
+    <color name="ic_launcher_background">#FF0D5C3A</color>
+    <color name="islamic_emerald_primary">#FF0D5C3A</color>
+    <color name="islamic_gold">#FFD4AF37</color>
 </resources>

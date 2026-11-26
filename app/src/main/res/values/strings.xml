@@ -1,6 +1,6 @@
 <resources>
     <!-- App name -->
-    <string name="app_name">StreamFlow</string>
+    <string name="app_name">MuslimTube</string>
 
     <!-- Navigation -->
     <string name="nav_home">Home</string>
@@ -24,31 +24,36 @@
     <!-- Video -->
     <string name="views">views</string>
     <string name="subscribe">Subscribe</string>
-    <string name="unsubscribe">Unsubscribed</string>
+    <string name="unsubscribe">Subscribed</string>
     <string name="related">Related</string>
     <string name="comments">Comments</string>
     <string name="chapters">Chapters</string>
 
     <!-- Categories / Filters -->
     <string name="all">All</string>
-    <string name="music">Music</string>
-    <string name="gaming">Gaming</string>
+    <string name="quran">Quran</string>
+    <string name="lectures">Lectures</string>
+    <string name="nasheed">Nasheed</string>
     <string name="news">News</string>
-    <string name="sports">Sports</string>
-    <string name="tech">Tech</string>
+    <string name="education">Education</string>
     <string name="filter_all">All</string>
     <string name="filter_videos">Videos</string>
     <string name="filter_channels">Channels</string>
     <string name="filter_playlists">Playlists</string>
-    <string name="filter_music">Music</string>
+    <string name="filter_music">Audio</string>
 
     <!-- Settings -->
-    <string name="settings_network">Network</string>
+    <string name="settings_engine">Streaming Source Engine</string>
+    <string name="settings_direct_youtube">Direct YouTube Extraction (NewPipe)</string>
+    <string name="settings_direct_youtube_desc">Fetch video streams directly from YouTube without third-party proxies</string>
+    <string name="settings_network">Network &amp; Piped Proxy</string>
     <string name="settings_piped_instance">Piped Instance URL</string>
     <string name="settings_piped_hint">https://pipedapi.kavin.rocks/</string>
     <string name="settings_disable_proxy">Disable Piped Proxy</string>
-    <string name="settings_disable_proxy_desc">Stream videos directly (less privacy, may fix playback issues)</string>
-    <string name="settings_playback">Playback</string>
+    <string name="settings_disable_proxy_desc">Stream directly if Piped server is overloaded</string>
+    <string name="settings_playback">Playback &amp; Gestures</string>
+    <string name="settings_gestures">Swipe Gestures (Brightness / Volume / Seek)</string>
+    <string name="settings_gestures_desc">Slide vertically for volume/brightness, double tap to seek 10s</string>
     <string name="settings_quality">Default Quality</string>
     <string name="settings_autoplay">Autoplay</string>
     <string name="settings_autoplay_desc">Automatically play next video</string>
@@ -60,16 +65,17 @@
     <string name="settings_ryd">Return YouTube Dislike</string>
     <string name="settings_ryd_desc">Show dislike count on videos</string>
     <string name="settings_dearrow">DeArrow</string>
-    <string name="settings_dearrow_desc">Replace clickbait titles and thumbnails</string>
+    <string name="settings_dearrow_desc">Clean clickbait titles and thumbnails</string>
     <string name="settings_appearance">Appearance</string>
     <string name="settings_theme">Theme</string>
-    <string name="settings_dynamic_color">Dynamic Color (Material You)</string>
+    <string name="settings_dynamic_color">Dynamic Colors</string>
     <string name="settings_language">Language</string>
-    <string name="settings_region">Trending Region</string>
+    <string name="settings_region">Region</string>
+    <string name="settings_saved_toast">Settings saved successfully</string>
 
     <!-- Errors -->
     <string name="error_network">No internet connection</string>
-    <string name="error_piped">Piped instance unavailable. Try switching in Settings → Network</string>
-    <string name="error_rate_limit">YouTube rate-limited this request. Try again later or switch instance</string>
-    <string name="error_playback">Playback failed. The stream URL may have expired</string>
+    <string name="error_piped">Piped instance unavailable. Direct YouTube engine recommended.</string>
+    <string name="error_rate_limit">YouTube rate-limited. Switch to direct extraction or wait a moment.</string>
+    <string name="error_playback">Playback failed. Stream URL may have expired, refreshing...</string>
 </resources>

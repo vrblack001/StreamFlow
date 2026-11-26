@@ -20,12 +20,16 @@ class PreferencesManager @Inject constructor(
     private val dataStore: DataStore<Preferences>
 ) {
     companion object {
+        // Engine Source
+        val USE_DIRECT_YOUTUBE   = booleanPreferencesKey("use_direct_youtube")
+
         // Network
         val PIPED_INSTANCE_URL   = stringPreferencesKey("piped_instance_url")
         val DISABLE_PIPED_PROXY  = booleanPreferencesKey("disable_piped_proxy")
 
         // Playback
         val DEFAULT_QUALITY      = stringPreferencesKey("default_quality")
+        val GESTURES_ENABLED     = booleanPreferencesKey("gestures_enabled")
         val PLAYBACK_SPEED       = floatPreferencesKey("playback_speed")
         val AUTO_PLAY            = booleanPreferencesKey("auto_play")
         val BACKGROUND_PLAY      = booleanPreferencesKey("background_play")
@@ -55,6 +59,12 @@ class PreferencesManager @Inject constructor(
     }
 
     // ── Getters (Flow) ───────────────────────────────────────────────────
+    val useDirectYoutube: Flow<Boolean> = dataStore.data.map {
+        it[USE_DIRECT_YOUTUBE] ?: true
+    }
+    val gesturesEnabled: Flow<Boolean> = dataStore.data.map {
+        it[GESTURES_ENABLED] ?: true
+    }
     val pipedInstanceUrl: Flow<String> = dataStore.data.map {
         it[PIPED_INSTANCE_URL] ?: DEFAULT_PIPED_URL
     }
@@ -110,6 +120,12 @@ class PreferencesManager @Inject constructor(
     }
 
     // ── Setters ──────────────────────────────────────────────────────────
+    suspend fun setUseDirectYoutube(value: Boolean) = dataStore.edit {
+        it[USE_DIRECT_YOUTUBE] = value
+    }
+    suspend fun setGesturesEnabled(value: Boolean) = dataStore.edit {
+        it[GESTURES_ENABLED] = value
+    }
     suspend fun setPipedInstanceUrl(url: String) = dataStore.edit {
         it[PIPED_INSTANCE_URL] = if (url.endsWith("/")) url else "$url/"
     }

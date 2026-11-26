@@ -1,6 +1,6 @@
 <resources>
     <!-- اسم التطبيق -->
-    <string name="app_name">ستريم فلو</string>
+    <string name="app_name">مسلم توب</string>
 
     <!-- التنقل -->
     <string name="nav_home">الرئيسية</string>
@@ -15,61 +15,67 @@
     <string name="retry">إعادة المحاولة</string>
     <string name="clear">مسح</string>
     <string name="cancel">إلغاء</string>
-    <string name="save">حفظ</string>
+    <string name="save">حفظ الإعدادات</string>
     <string name="ok">موافق</string>
     <string name="close">إغلاق</string>
     <string name="load_more">تحميل المزيد</string>
-    <string name="search_placeholder">ابحث عن مقاطع، قنوات…</string>
+    <string name="search_placeholder">ابحث عن مقاطع، قنوات، دروس، تلاوات…</string>
 
     <!-- الفيديو -->
     <string name="views">مشاهدة</string>
     <string name="subscribe">اشتراك</string>
-    <string name="unsubscribe">إلغاء الاشتراك</string>
-    <string name="related">ذات صلة</string>
+    <string name="unsubscribe">مشترك</string>
+    <string name="related">مقاطع ذات صلة</string>
     <string name="comments">التعليقات</string>
     <string name="chapters">الفصول</string>
 
-    <!-- الفئات / التصفية -->
+    <!-- الفئات / التصفية الإسلامية والعامة -->
     <string name="all">الكل</string>
-    <string name="music">موسيقى</string>
-    <string name="gaming">ألعاب</string>
+    <string name="quran">قرآن كريم</string>
+    <string name="lectures">محاضرات ودروس</string>
+    <string name="nasheed">أناشيد</string>
     <string name="news">أخبار</string>
-    <string name="sports">رياضة</string>
-    <string name="tech">تقنية</string>
+    <string name="education">تعليم وثقافة</string>
     <string name="filter_all">الكل</string>
     <string name="filter_videos">مقاطع</string>
     <string name="filter_channels">قنوات</string>
     <string name="filter_playlists">قوائم تشغيل</string>
-    <string name="filter_music">موسيقى</string>
+    <string name="filter_music">صوتيات</string>
 
     <!-- الإعدادات -->
-    <string name="settings_network">الشبكة</string>
-    <string name="settings_piped_instance">رابط خادم Piped</string>
+    <string name="settings_engine">محرك جلب وبث الفيديو</string>
+    <string name="settings_direct_youtube">الجلب المباشر من يوتيوب (Direct YouTube)</string>
+    <string name="settings_direct_youtube_desc">استخراج روابط البث مباشرة من يوتيوب دون الاعتماد على خوادم وسيطة خارجية</string>
+    <string name="settings_network">الشبكة وخوادم Piped</string>
+    <string name="settings_piped_instance">رابط خادم Piped الوسيط</string>
     <string name="settings_piped_hint">https://pipedapi.kavin.rocks/</string>
     <string name="settings_disable_proxy">تعطيل وكيل Piped</string>
-    <string name="settings_disable_proxy_desc">بث الفيديو مباشرةً (خصوصية أقل، قد يحل مشاكل التشغيل)</string>
-    <string name="settings_playback">التشغيل</string>
+    <string name="settings_disable_proxy_desc">بث الفيديو المباشر في حال بطء أو توقف الخادم</string>
+    <string name="settings_playback">التشغيل والإيماءات</string>
+    <string name="settings_gestures">تفعيل إيماءات التمرير (السطوع / الصوت / التقديم)</string>
+    <string name="settings_gestures_desc">اسحب على اليمين للصوت، وعلى اليسار لسطوع الشاشة، ونقر مزدوج للتقديم 10 ثوانٍ</string>
     <string name="settings_quality">الجودة الافتراضية</string>
     <string name="settings_autoplay">التشغيل التلقائي</string>
     <string name="settings_autoplay_desc">تشغيل الفيديو التالي تلقائياً</string>
     <string name="settings_background">التشغيل في الخلفية</string>
-    <string name="settings_pip">صورة داخل صورة</string>
-    <string name="settings_enhancements">الإضافات</string>
+    <string name="settings_pip">صورة داخل صورة (PiP)</string>
+    <string name="settings_enhancements">الإضافات والتحسينات</string>
     <string name="settings_sponsorblock">SponsorBlock</string>
-    <string name="settings_sponsorblock_desc">تخطي المقاطع الإعلانية تلقائياً</string>
+    <string name="settings_sponsorblock_desc">تخطي المقاطع الإعلانية والترويجية تلقائياً</string>
     <string name="settings_ryd">Return YouTube Dislike</string>
-    <string name="settings_ryd_desc">إظهار عدد الإعجابات السلبية</string>
+    <string name="settings_ryd_desc">إظهار عدد عدم الإعجاب</string>
     <string name="settings_dearrow">DeArrow</string>
-    <string name="settings_dearrow_desc">استبدال العناوين والصور المبالغ فيها</string>
-    <string name="settings_appearance">المظهر</string>
-    <string name="settings_theme">السمة</string>
-    <string name="settings_dynamic_color">الألوان الديناميكية (Material You)</string>
+    <string name="settings_dearrow_desc">إزالة العناوين والصور المضللة واستبدالها بعناوين نقية</string>
+    <string name="settings_appearance">المظهر والسمة</string>
+    <string name="settings_theme">سمة الواجهة (إسلامية / داكنة / فاتحة)</string>
+    <string name="settings_dynamic_color">الألوان الديناميكية</string>
     <string name="settings_language">اللغة</string>
-    <string name="settings_region">منطقة المحتوى الرائج</string>
+    <string name="settings_region">المنطقة</string>
+    <string name="settings_saved_toast">تم حفظ جميع الإعدادات بنجاح</string>
 
     <!-- الأخطاء -->
     <string name="error_network">لا يوجد اتصال بالإنترنت</string>
-    <string name="error_piped">خادم Piped غير متاح. جرب تغيير الخادم من الإعدادات ← الشبكة</string>
-    <string name="error_rate_limit">يوتيوب يحد من الطلبات. انتظر قليلاً أو غير الخادم</string>
-    <string name="error_playback">فشل التشغيل. قد تكون رابط البث قد انتهت صلاحيته</string>
+    <string name="error_piped">الخادم الوسيط غير متوفر، ينصح بتفعيل الجلب المباشر من يوتيوب في الإعدادات</string>
+    <string name="error_rate_limit">يوتيوب يحد من الطلبات، يرجى التبديل للجلب المباشر أو الانتظار قليلاً</string>
+    <string name="error_playback">تعذر تشغيل المقطع، جاري إعادة توليد رابط البث المباشر...</string>
 </resources>
